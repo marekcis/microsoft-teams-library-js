@@ -1,7 +1,7 @@
 name: Post Release
 on:
   pull_request:
-    branches: [release/2.*]
+    branches: [release/2.0.0-beta.*]
     types: [closed]
 
 jobs:
