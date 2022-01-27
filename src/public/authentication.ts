@@ -18,6 +18,7 @@ export namespace authentication {
   let authWindowMonitor: number;
 
   export function initialize(): void {
+    console.log('!! marekcis custom teams initialisation');
     registerHandler('authentication.authenticate.success', handleSuccess, false);
     registerHandler('authentication.authenticate.failure', handleFailure, false);
   }
@@ -154,7 +155,7 @@ export namespace authentication {
     Communication.childWindow = Communication.currentWindow.open(
       link.href,
       '_blank',
-      'toolbar=no, location=yes, status=no, menubar=no, scrollbars=yes, top=' +
+      'rel=opener, toolbar=no, location=yes, status=no, menubar=no, scrollbars=yes, top=' +
         top +
         ', left=' +
         left +
